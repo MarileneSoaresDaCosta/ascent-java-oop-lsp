@@ -17,7 +17,7 @@ public class CharterFlight extends Flight {
         }
     }
 
-    private int totalWeight() {
+    protected int totalWeight() {
         int additionalWeight = isCatered() ? Passenger.AgeGroup.ADULT.getAverageWeight() + AVERAGE_FOOD_WEIGHT : 0;
         return tickets.stream().map(Ticket::getPassenger).mapToInt(Passenger::getWeight).sum() + additionalWeight;
     }

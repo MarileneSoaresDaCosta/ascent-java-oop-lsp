@@ -34,8 +34,14 @@ public class Flight {
 
     public void addTicket(Ticket ticket) {
         if (tickets.size() < getCapacity()) {
-            tickets.add(ticket);
+            if ( totalWeight() + ticket.getPassenger().getWeight() <= weightLimit){
+                tickets.add(ticket);
+            }
         }
+    }
+
+    protected int totalWeight() {
+        return tickets.stream().map(Ticket::getPassenger).mapToInt(Passenger::getWeight).sum();
     }
 
     public int getCapacity() {
