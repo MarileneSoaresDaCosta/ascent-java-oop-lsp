@@ -7,7 +7,7 @@ public class CharterFlight extends Flight {
     private boolean catered;
 
     public CharterFlight(String departingAirport, String arrivingAirport, int capacity, int weightLimit) {
-        super(departingAirport, arrivingAirport, capacity);
+        super(departingAirport, arrivingAirport, capacity, weightLimit);
         this.weightLimit = weightLimit;
     }
 

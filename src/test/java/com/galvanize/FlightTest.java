@@ -17,7 +17,7 @@ public class FlightTest {
         Ticket ticket2 = new Ticket(new Passenger("Theodosia", ADULT), new BigDecimal("190.00"));
         Ticket ticket3 = new Ticket(new Passenger("Peggy", CHILD), new BigDecimal("198.00"));
 
-        Flight flight = new Flight("DEN", "LGA", 2);
+        Flight flight = new Flight("DEN", "LGA", 2, 150);
 
         flight.addTicket(ticket1);
         flight.addTicket(ticket2);
